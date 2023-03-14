@@ -14,6 +14,9 @@ body{
     overflow-x: hidden;
     
 }
+html, body{
+    scroll-behavior: smooth;
+}
 .rotate-90{
     transform: rotate(90deg);
 }
@@ -62,9 +65,9 @@ width: 100vw!important;
  .img-thumb{
     max-width: 30%!important;
  }
- html{
+ /* html{
     overflow-x: hidden;
- }
+ } */
 
 .max-width-30{
     max-width: 30vw;
@@ -188,6 +191,36 @@ transform: translateY(0px) rotate(135deg);
     .nav-toggler.active .l3{
         transform: translateY(0px) rotate(-135deg);
         }
+
+
+ /* effet d'apparition  */
+#nom, #contact, #title-skills, #skills1, #skills3, #skills5, #skills7,
+#skills9, #tech-title, #tech2, #tech4, #tech6, #tech8, #tech10, #tech12, #tech14, #tech16, #design-multi, #pj-1, #pj-3{
+    opacity: 0;
+    transform: translateX(30px);
+
+}
+
+#description, #view, #skills-2, #skills-4, #skills-6, #tech-1, #tech-3, #tech-5, #tech-7, #tech-9, #tech-11,
+#tech-13, #tech-15, #tech-17, #project-title, #pj-2, #pj-4{
+    opacity: 0;
+    transform: translateX(-30px);
+}
+.apparaitre{
+    opacity: 0;
+    transform: translateX(30px);
+    animation: apparition 1.2s 0.2s ease-out forwards;
+}
+@keyframes apparition {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+
 @media screen and (max-width: 1200px) {
     .hide-responsive{
       display: none!important;

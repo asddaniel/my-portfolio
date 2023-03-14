@@ -101,3 +101,52 @@ dynamicIcon.addEventListener("click", function(e){
 
 })
 
+
+const observer1 = new IntersectionObserver((entries)=>{
+    
+    for(const entry of entries){
+        
+            
+            if(entry.isIntersecting){
+                entry.target.classList.add('apparaitre');
+                observer1.unobserve(entry.target)
+                // let sticky = document.querySelectorAll(".sticky-text");
+                // let bars = document.querySelectorAll(".sticky-bar");
+                // bars.forEach(element => {
+                //     element.classList.remove("bg-blue");
+                //     element.classList.add("bg-white")
+                // });
+                // sticky.forEach(element => {
+                //     element.classList.remove("text-blue")
+                //     element.classList.add("text-white")
+                // });
+               
+                // console.log(entry.target)
+            }
+        
+      
+        //document.querySelector('.nav-bar').classList.toggle('inactive')
+    }
+}, {
+    threshold: 0.25
+})
+observer1.observe(document.querySelector("#nom"))
+observer1.observe(document.querySelector("#description"))
+observer1.observe(document.querySelector("#contact"))
+observer1.observe(document.querySelector("#view"))
+// observer1.observe(document.querySelector("#sticky-mail"))
+// observer1.observe(document.querySelector("#sticky-link"))
+observer1.observe(document.querySelector("#title-skills"))
+for(let i=1; i<=9; i++){
+    observer1.observe(document.querySelector("#skills-"+i));
+}
+observer1.observe(document.querySelector("#tech-title"))
+for(i=1; i<=17; i++){
+    observer1.observe(document.querySelector("#tech-"+i))
+}
+observer1.observe(document.querySelector("#design-multi"))
+observer1.observe(document.querySelector("#project-title"))
+observer1.observe(document.querySelector("#pj-1"))
+observer1.observe(document.querySelector("#pj-2"))
+observer1.observe(document.querySelector("#pj-3"))
+observer1.observe(document.querySelector("#pj-4"))
