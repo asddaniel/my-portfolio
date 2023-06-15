@@ -204,15 +204,18 @@ transform: translateY(0px) rotate(135deg);
 #description, #view, #skills-2, #skills-4, #skills-6, #tech-1, #tech-3, #tech-5, #tech-7, #tech-9, #tech-11,
 #tech-13, #tech-15, #tech-17, #project-title, #pj-2, #pj-4{
     opacity: 0;
+    /* filter: blur(5px); */
     transform: translateX(-30px);
 }
 .apparaitre{
     opacity: 0;
+    filter: blur(5px);
     transform: translateX(30px);
     animation: apparition 1.2s 0.2s ease-out forwards;
 }
 @keyframes apparition {
     100%{
+        filter: blur(0px);
         opacity: 1;
         transform: none;
     }

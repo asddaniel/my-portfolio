@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/effet.css">
     
     <title>Daniel Assani</title>
 </head>
@@ -75,14 +76,21 @@
            <div class="col-lg-6   d-flex flex-column justify-content-center px-lg-5">
             <div class="row pb-3 px-lg-5 transitive" id="nom">
                 <div class="d-flex  align-items-center">
-                    <div class="h1 text-white fw-bold ">Daniel Assani</div>
+                    <div class="h1 text-white fw-bold  ">Daniel Assani</div>
                 </div>
                 
             </div>
+            <div class="design">FULL-STACK</div>
             <div class="row px-lg-5 transitive" id="description">
-                <div class="text-light fw-light">
-                    Developpeur Web Full stack, ingénieur Logiciel et specialiste dans plusieurs domaine informatique. 
+                <div class="text-light fw-light classified">
+                    <div class="text-effect-1">
+                        Developpeur Web Full stack, ingénieur Logiciel et specialiste dans plusieurs domaine informatique. 
+                    </div>
+                   <div class="text-effect-1">
                     je construit des solutions informatique innovant pour les entreprises ainsi que les particuliers
+                   </div>
+                    
+                    
                 </div>
             </div>
             <div class="row pt-4 px-5 transitive" id="contact">
@@ -170,7 +178,7 @@
 
       <!-- skills start  -->
 
-      <div class="container-fluid pt-5 pb-5" id="skills">
+      <div class="container-fluid pt-5 pb-5 " id="skills">
         <div class="row pb-5 transitive" id="title-skills">
             <div class="d-flex justify-content-center flex-column align-items-center  pt-5"> 
                 <div class="h1 fw-bold">
@@ -321,9 +329,10 @@
       </div>
 
       <!-- skills end  -->
+     
 
       <!-- technologie start  -->
-      <div class="container-fluid pt-5 px-lg-5" id="techno">
+      <div class="container-fluid pt-5 px-lg-5 " id="techno">
             <div class="row px-5 pb-5 transitive" id="tech-title">
                  <div class="d-flex align-items-center justify-content-center">
                     <div class="h1 fw-bold text-blue"> Technologie </div>
@@ -894,5 +903,12 @@
     <!-- project end -->
    <script src="js/core.js"></script>
     <script src="js/style.js " defer></script>
+    <script src="js/effect.js"></script>
+    <script>
+        document.querySelector(".action-choice").addEventListener("click", function(e){
+            e.preventDefault();
+            //document.querySelector(".effacer").classList.remove("effacer");
+        })
+    </script>
 </body>
 </html>
