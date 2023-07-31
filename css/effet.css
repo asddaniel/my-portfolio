@@ -15,6 +15,39 @@
   /* transition: all 0.5s ease-in-out; */
  transform:skewX(45px)
 }
+.dessus{
+  z-index: 50;
+}
+.element{
+  overflow-x: hidden;
+  position:absolute;
+  z-index: -1;
+  transition: all 0.5s ease-in-out!important;
+  /* animation: effacer 2.2s 0.2s ease-out forwards; */
+}
+@keyframes effacer {
+  0%{
+    height: 0px;
+    filter: blur(40px);
+  }
+  50%{
+    height: 10px;
+    filter: blur(4px);
+  }
+  100%{
+      filter: blur(0px);
+      opacity: 1;
+      transform: translateY(-45px);
+  }
+}
+.hide{
+  
+  
+  transform: translateY(78px);
+  transform: rotateX(89deg);
+  z-index: 9999;
+  
+}
 .effacer:hover{
 height: 10vh;
 }
